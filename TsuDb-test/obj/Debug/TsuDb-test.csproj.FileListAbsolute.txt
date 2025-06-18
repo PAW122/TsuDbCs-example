@@ -1,0 +1,7 @@
+D:\projects\TsuDbCs\TsuDb-test\bin\Debug\TsuDb-test.exe.config
+D:\projects\TsuDbCs\TsuDb-test\bin\Debug\TsuDb-test.exe
+D:\projects\TsuDbCs\TsuDb-test\bin\Debug\TsuDb-test.pdb
+D:\projects\TsuDbCs\TsuDb-test\obj\Debug\TsuDb-test.csproj.AssemblyReference.cache
+D:\projects\TsuDbCs\TsuDb-test\obj\Debug\TsuDb-test.csproj.CoreCompileInputs.cache
+D:\projects\TsuDbCs\TsuDb-test\obj\Debug\TsuDb-test.exe
+D:\projects\TsuDbCs\TsuDb-test\obj\Debug\TsuDb-test.pdb
