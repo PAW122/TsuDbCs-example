@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
 public static class TsunamiClient
@@ -36,17 +36,19 @@ public static class TsunamiClient
     public static byte[] ReadBytes(string key, string table)
     {
         if (Read(key, table, out var ptr, out var len) != 0)
-            throw new Exception("Read failed");
+            return null;
+
         var data = new byte[len];
         Marshal.Copy(ptr, data, 0, len);
         FreeBuf(ptr);
         return data;
     }
 
+
     public static byte[] ReadEncryptedBytes(string key, string table, string encKey)
     {
         if (ReadEncrypted(key, table, encKey, out var ptr, out var len) != 0)
-            throw new Exception("ReadEncrypted failed");
+            return null;
         var data = new byte[len];
         Marshal.Copy(ptr, data, 0, len);
         FreeBuf(ptr);
@@ -56,7 +58,7 @@ public static class TsunamiClient
     public static string[] GetKeys(string regex, int max)
     {
         if (GetKeysByRegex(regex, max, out var arrayPtr, out var count) != 0)
-            throw new Exception("GetKeysByRegex failed");
+            return null;
 
         var result = new string[count];
         for (int i = 0; i < count; i++)
